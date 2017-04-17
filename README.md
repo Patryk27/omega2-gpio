@@ -71,7 +71,7 @@ And if you want too, you just have to:
 ```
 g++ -std=c++11 gpio.cpp led-blink.cpp
 ```
-It should take about 20 seconds and create an `a.out` file (in the directory where you ran the command), which can be executed.
+It should take about 20 seconds and result in an `a.out` file (in the directory where you ran the command), which can be executed.
 
 Disclaimer: I have tested it on my `pivot-root`ed Omega 2+ - I do not know if `gcc` works on the standard version (with the 64 MB of RAM) nor do I know if your Omega 2(+) without `pivot-*` will have sufficient storage space to install `gcc`.
 
