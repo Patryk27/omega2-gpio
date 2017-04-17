@@ -20,13 +20,13 @@ They export the `Gpio` class with following methods:
 ```cpp
 static void Gpio::initialize();
 
-void Gpio::pinMode(uint8_t pin, uint8_t direction);
+static void Gpio::pinMode(uint8_t pin, uint8_t direction);
 
-void Gpio::digitalWrite(uint8_t pin, uint8_t value);
+static void Gpio::digitalWrite(uint8_t pin, uint8_t value);
 
-uint8_t Gpio::digitalRead(uint8_t pin);
+static uint8_t Gpio::digitalRead(uint8_t pin);
 
-void Gpio::shiftOut(uint8_t dataPin, uint8_t clockPin, GpioBitOrder bitOrder, uint8_t value);
+static void Gpio::shiftOut(uint8_t dataPin, uint8_t clockPin, GpioBitOrder bitOrder, uint8_t value);
 ```
 
 (you can find their descriptions inside the `gpio.h`: https://github.com/Patryk27/Omega2-GPIO/blob/master/gpio.h)
@@ -71,7 +71,7 @@ And if you want too, you just have to:
 ```
 g++ -std=c++11 gpio.cpp led-blink.cpp
 ```
-It should generate an `a.out` file (in the directory where you ran the command), which can be executed.
+It should take about 20 seconds and create an `a.out` file (in the directory where you ran the command), which can be executed.
 
 Disclaimer: I have tested it on my `pivot-root`ed Omega 2+ - I do not know if `gcc` works on the standard version (with the 64 MB of RAM) nor do I know if your Omega 2(+) without `pivot-*` will have sufficient storage space to install `gcc`.
 
